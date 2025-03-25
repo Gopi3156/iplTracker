@@ -1,0 +1,146 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'theme.scss';
+
+// Global styles
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #ffffff;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// Responsive breakpoints
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+}
+
+// Material Design overrides
+.mat-mdc-card {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  background: linear-gradient(45deg, #5C6BC0, #3F51B5) !important;
+  box-shadow: 0 4px 15px rgba(63, 81, 181, 0.3) !important;
+  transition: all 0.3s ease !important;
+  color: white !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(63, 81, 181, 0.4) !important;
+    background: linear-gradient(45deg, #7986CB, #5C6BC0) !important;
+  }
+}
+
+.mat-mdc-form-field {
+  .mat-mdc-form-field-flex {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background: transparent !important;
+  }
+
+  .mat-mdc-form-field-label {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 400 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.3px !important;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
+    border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
+    border-bottom-color: #9FA8DA !important;
+  }
+
+  input {
+    color: white !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 0.3px !important;
+    
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.7) !important;
+    }
+  }
+
+  &.mat-focused {
+    .mat-mdc-form-field-label {
+      color: #9FA8DA !important;
+    }
+  }
+}
+
+// Custom utility classes
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 2rem;
+}
+
+// Animation classes
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "ipl-tracker",
+  "version": "1.0.0",
+  "description": "IPL Tracker Application",
+  "scripts": {
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "start:backend": "cd backend && npm run start:dev",
+    "start:frontend": "cd frontend && npm start",
+    "start:all": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "dependencies": {
+    "@angular/cdk": "^16.2.12",
+    "@angular/material": "^16.2.12"
+  }
+}
