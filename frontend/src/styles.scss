@@ -7,9 +7,9 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: #0D1117;
+  color: #C9D1D9;
 }
 
 app-root {
@@ -34,31 +34,31 @@ app-root {
 
 // Material Design overrides
 .mat-mdc-card {
-  background: rgba(255, 255, 255, 0.15) !important;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  background: #161B22 !important;
+  border: 1px solid #30363D;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  border-radius: 6px;
 }
 
 .mat-mdc-raised-button.mat-primary {
-  background: linear-gradient(45deg, #5C6BC0, #3F51B5) !important;
-  box-shadow: 0 4px 15px rgba(63, 81, 181, 0.3) !important;
-  transition: all 0.3s ease !important;
+  background: #238636 !important;
+  box-shadow: 0 2px 8px rgba(35, 134, 54, 0.2) !important;
+  transition: all 0.2s ease !important;
   color: white !important;
   font-weight: 500 !important;
-  letter-spacing: 0.5px !important;
+  letter-spacing: 0.3px !important;
+  border-radius: 6px !important;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(63, 81, 181, 0.4) !important;
-    background: linear-gradient(45deg, #7986CB, #5C6BC0) !important;
+    background: #2EA043 !important;
+    box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3) !important;
   }
 }
 
 .mat-mdc-form-field {
   .mat-mdc-form-field-flex {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 4px 4px 0 0;
+    background: #0D1117 !important;
+    border-radius: 6px;
   }
 
   .mdc-text-field--filled:not(.mdc-text-field--disabled) {
@@ -66,33 +66,33 @@ app-root {
   }
 
   .mat-mdc-form-field-label {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #8B949E !important;
     font-weight: 400 !important;
-    font-size: 1.1rem !important;
-    letter-spacing: 0.3px !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 0.2px !important;
   }
 
   .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
-    border-bottom-color: rgba(255, 255, 255, 0.3) !important;
+    border-bottom-color: #30363D !important;
   }
 
   .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after {
-    border-bottom-color: #9FA8DA !important;
+    border-bottom-color: #238636 !important;
   }
 
   input {
-    color: white !important;
-    font-size: 1.1rem !important;
-    letter-spacing: 0.3px !important;
+    color: #C9D1D9 !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 0.2px !important;
     
     &::placeholder {
-      color: rgba(255, 255, 255, 0.7) !important;
+      color: #8B949E !important;
     }
   }
 
   &.mat-focused {
     .mat-mdc-form-field-label {
-      color: #9FA8DA !important;
+      color: #238636 !important;
     }
   }
 }
@@ -112,13 +112,13 @@ app-root {
 
 // Animation classes
 .fade-in {
-  animation: fadeIn 0.3s ease-in;
+  animation: fadeIn 0.2s ease-out;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -133,14 +133,42 @@ app-root {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: #0D1117;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
+  background: #30363D;
   border-radius: 4px;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: #8B949E;
+  }
+}
+
+// Additional Cursor-inspired styles
+h1, h2, h3, h4, h5, h6 {
+  color: #C9D1D9;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+a {
+  color: #58A6FF;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #79B8FF;
+    text-decoration: underline;
+  }
+}
+
+// Card hover effect
+.mat-mdc-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
   }
 }
